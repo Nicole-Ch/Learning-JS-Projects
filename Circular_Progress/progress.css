@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+body{
+    background: #e3edf7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill{
+    width: 160px;
+    height: 160px;
+    
+    position: relative;
+}
+
+.outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow:
+    6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+  padding: 20px;
+  
+}
+
+.inner {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  background: inherit;
+
+  /* Directional inset shading + subtle outer separation */
+  box-shadow:
+    inset 6px 6px 14px rgba(0,0,0,0.25),      /* dark bottom-right corner (soft) */
+    inset -6px -6px 14px rgba(255,255,255,0.6),/* highlight top-left */
+    0 6px 12px -8px rgba(0,0,0,0.06);          /* small outer drop to appear raised */
+}
+
+
+
+#number{
+    color: #555;
+    font-size: 30px;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim {
+    100%{
+        stroke-dashoffset: 165;
+    }
+}
